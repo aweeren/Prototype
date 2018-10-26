@@ -40,7 +40,7 @@ namespace Prototype
 
             using (var db = new FoodContext())
             {
-                foodItems = db.FoodItems.Take(25).ToList();
+                foodItems = db.FoodItems.Take(20).ToList();
             }
 
             var config = new Configuration();

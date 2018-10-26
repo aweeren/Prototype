@@ -25,9 +25,15 @@ namespace Prototype
         private void button1_Click(object sender, EventArgs e)
         {
             textBoxAdvice.Text = "";
+            textBoxAdvice.Visible = false;
+            panel1.Visible = false;
             if (button3.Visible)
             {
                 button3.Visible = false;
+            }
+            if (button2.Visible)
+            {
+                button2.Visible = false;
             }
             using (var frm = new formCapture(netAge, netGender, face_cascade))
             {
@@ -47,6 +53,8 @@ namespace Prototype
                     pictureBox1.Image = frm.Image.ToBitmap();
                 }
             }
+            panel1.Visible = true;
+            button2.Visible = true;
         }
 
         private void formMain_Load(object sender, EventArgs e)
@@ -121,7 +129,7 @@ namespace Prototype
             adviceString += $"Advised daily fibers:\t\t{ advFibers:F0} grams";
             
             textBoxAdvice.Text = adviceString;
-
+            textBoxAdvice.Visible = true;
             button3.Visible = true;
         }
 
@@ -141,6 +149,9 @@ namespace Prototype
             // Go back to initial state
             button3.Visible = false;
             textBoxAdvice.Text = "";
+            textBoxAdvice.Visible = false;
+            button2.Visible = false;
+            panel1.Visible = false;
             pictureBox1.Image = null;
         }
 
