@@ -51,6 +51,7 @@ namespace Prototype
                 {
                     frm.Image.ROI = frm.ROI;
                     pictureBox1.Image = frm.Image.ToBitmap();
+                    pictureBox1.Visible = true;
                 }
             }
             panel1.Visible = true;
@@ -102,15 +103,15 @@ namespace Prototype
                 weight = 75;
             }
             ActivityLevel activity = ActivityLevel.Medium;
-            switch (comboBoxActivity.SelectedText)
+            switch (comboBoxActivity.SelectedIndex)
             {
-                case "Office worker" :
+                case 0 :
                     activity = ActivityLevel.Light;
                     break;
-                case "Active":
+                case 1 :
                     activity = ActivityLevel.Medium;
                     break;
-                case "Laborious":
+                case 2 :
                     activity = ActivityLevel.Heavy;
                     break;
             }
@@ -153,6 +154,7 @@ namespace Prototype
             button2.Visible = false;
             panel1.Visible = false;
             pictureBox1.Image = null;
+            pictureBox1.Visible = false;
         }
 
         private void button4_Click(object sender, EventArgs e)
