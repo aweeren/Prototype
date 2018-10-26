@@ -1,0 +1,33 @@
+﻿body {
+    font-size: 12pt;
+}
+
+p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+}
+
+table {
+    border: medium solid black;
+    background-color: antiquewhite;
+    width: 80%;
+}
+
+th {
+    background-color: lightblue;
+    font-weight: 400;
+    padding: 8px;
+}
+
+td {
+    text-align:left;
+    vertical-align:bottom;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
